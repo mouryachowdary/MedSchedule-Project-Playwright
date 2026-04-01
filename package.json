@@ -1,0 +1,38 @@
+{
+  "name": "medschedule---project",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "clean:allure": "node scripts/allure-workflow.js reset",
+    "clean:reports": "npm run clean:allure && rimraf playwright-report test-results",
+    "clean": "npm run clean:reports",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:no-clean": "PW_CLEAN=false playwright test",
+    "test:report": "playwright show-report",
+    "test:allure": "npm run clean:allure && playwright test && npm run allure:generate",
+    "allure:generate": "node scripts/allure-workflow.js generate",
+    "allure:open": "node scripts/allure-workflow.js open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@eslint/css": "^1.1.0",
+    "@eslint/js": "^10.0.1",
+    "@eslint/json": "^1.2.0",
+    "@eslint/markdown": "^8.0.1",
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^22.0.0",
+    "allure-commandline": "^2.34.1",
+    "allure-playwright": "^3.4.1",
+    "eslint": "^10.1.0",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^17.4.0",
+    "jiti": "^2.6.1",
+    "rimraf": "^6.0.1",
+    "typescript": "^6.0.2",
+    "typescript-eslint": "^8.58.0"
+  }
+}

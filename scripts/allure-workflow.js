@@ -55,7 +55,7 @@ async function generateReport() {
 
 async function openReport() {
   await generateReport();
-  await runCommand('npx allure open allure-report');
+  await runCommand('npx allure open allure-report --host 0.0.0.0');
 }
 
 async function main() {

@@ -32,6 +32,7 @@ test('12a. [Active Date] second booking attempt fails when User 007 books first 
       await preparePatientForCurrentDate(firstUser, bookingOrder.firstUser);
       await chooseSlot(firstUser, bookingOrder.slot);
       await confirmBooking(firstUser);
+      await expect(firstUser.bookingSuccessMessage()).toBeVisible();
 
       await preparePatientForCurrentDate(secondUser, bookingOrder.secondUser);
       const secondAttempt = await duplicateAttemptState(secondUser, bookingOrder.slot);
@@ -58,6 +59,7 @@ test('12b. [Future Date] second booking attempt fails when User 007 books first 
       await preparePatientForBooking(firstUser, bookingOrder.firstUser);
       await chooseSlot(firstUser, bookingOrder.slot);
       await confirmBooking(firstUser);
+      await expect(firstUser.bookingSuccessMessage()).toBeVisible();
 
       await preparePatientForBooking(secondUser, bookingOrder.secondUser);
       const secondAttempt = await duplicateAttemptState(secondUser, bookingOrder.slot);

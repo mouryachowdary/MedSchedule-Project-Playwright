@@ -83,7 +83,7 @@ export default defineConfig({
     headless: process.env.PW_HEADLESS ? process.env.PW_HEADLESS !== 'false' : true,
     storageState: storageStatePath,
     /* Base URL to use in actions like `await page.goto('')`. */
-    baseURL: 'https://medicare-flow-bot.lovable.app/',
+    baseURL: 'https://medicare-appointmentbooking-app.vercel.app/',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',

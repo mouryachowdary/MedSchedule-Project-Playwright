@@ -2,13 +2,7 @@ import { expect, test } from '@playwright/test';
 
 import {
   MedSchedulePage,
-  randomUserOrder,
-  preparePatientForBooking,
   selectRandomFutureMonthAndDay,
-  chooseSlot,
-  confirmBooking,
-  tryConfirmBooking,
-  bookingSucceeded,
   availableSlots,
   patients,
   getTestTimeout,
